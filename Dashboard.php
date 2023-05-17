@@ -1,3 +1,18 @@
+
+
+
+<?php
+session_start();
+echo "welecome".$_SESSION['user_name'];
+
+if(!isset($_SESSION['user_name'])){
+  echo "you are log out";
+   header('location:LoginPage.php');
+}
+
+?> 
+
+
 <!doctype html>
 <html lang="en">
   <head>

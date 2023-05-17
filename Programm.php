@@ -1,3 +1,21 @@
+
+
+
+<?php
+session_start();
+echo "welecome".$_SESSION['user_name'];
+
+if(!isset($_SESSION['user_name'])){
+  echo "you are log out";
+   header('location:Login.php');
+}
+
+
+?> 
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -58,7 +76,7 @@
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" href="#">Change Password</a>
     <a class="dropdown-item" href="#">Profile</a>
-    <a class="dropdown-item" href="#">Logout</a>
+    <a class="dropdown-item" href="Logout.php">Logout</a>
   </div>
 </div>
 
@@ -298,9 +316,7 @@ else{
 alert(data);
 
                 $("#form1")[0].reset();
-                displayData();
-
-
+                displayData()
                 
             }
         });
